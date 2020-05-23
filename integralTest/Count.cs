@@ -14,13 +14,23 @@ namespace integralTest
 			if (h < 0.0)
 			{
 				throw new ArgumentException();
-
 			}
 
 			if (h > 1.0)
 			{
 				throw new ArgumentException();
 			}
+
+			if ((h < 0.000001) && (h != 0.0))
+			{
+				throw new ArgumentException();
+			}
+
+			if (a >= b)
+			{
+				throw new ArgumentException();
+			}
+
 			double hh = h;
 			double N = (b - a) / h;
 			double x = a;
@@ -38,6 +48,26 @@ namespace integralTest
 
 		public double ParRect(double a, double b, double h, Func<double, double> func)
 		{
+			if (h < 0.0)
+			{
+				throw new ArgumentException();
+			}
+
+			if (h > 1.0)
+			{
+				throw new ArgumentException();
+			}
+
+			if ((h < 0.000001) && (h != 0.0))
+			{
+				throw new ArgumentException();
+			}
+
+			if (a >= b)
+			{
+				throw new ArgumentException();
+			}
+
 			double S = 0.0;
 
 			if (h != 0.0)
@@ -64,13 +94,23 @@ namespace integralTest
 			if (h < 0.0)
 			{
 				throw new ArgumentException();
-
 			}
 
 			if (h > 1.0)
 			{
 				throw new ArgumentException();
 			}
+
+			if ((h < 0.000001) && (h != 0.0))
+			{
+				throw new ArgumentException();
+			}
+
+			if (a >= b)
+			{
+				throw new ArgumentException();
+			}
+
 			double hh = h;
 			double S = 0;
 			double N = (b - a) / hh;
@@ -91,6 +131,26 @@ namespace integralTest
 		}
 		public double ParSimpson(double a, double b, double h, Func<double, double> func)
 		{
+			if (h < 0.0)
+			{
+				throw new ArgumentException();
+			}
+
+			if (h > 1.0)
+			{
+				throw new ArgumentException();
+			}
+
+			if ((h < 0.000001) && (h != 0.0))
+			{
+				throw new ArgumentException();
+			}
+
+			if (a >= b)
+			{
+				throw new ArgumentException();
+			}
+
 			double S = 0.0;
 
 			if (h != 0.0)

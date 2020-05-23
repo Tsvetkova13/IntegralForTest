@@ -63,7 +63,7 @@ namespace integralTest
 				{
 					DateTime t1 = DateTime.Now;
 
-					ResRecS.Text = Convert.ToString(Math.Round(r.Rectangles(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
+					ResRecP.Text = Convert.ToString(Math.Round(r.Rectangles(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
 
 					TimeSpan time = DateTime.Now - t1;
 					RtimeP.Text = Convert.ToString(time.TotalSeconds) + " сек";
@@ -119,7 +119,7 @@ namespace integralTest
 				{
 					DateTime t1 = DateTime.Now;
 
-					ResSimS.Text = Convert.ToString(Math.Round(s.Simpson(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
+					ResSimP.Text = Convert.ToString(Math.Round(s.Simpson(num1, num2, num3, x => 31.0 * x - Math.Log(5.0 * x) + 5.0), 3));
 
 					TimeSpan time = DateTime.Now - t1;
 					StimeP.Text = Convert.ToString(time.TotalSeconds) + " сек";
